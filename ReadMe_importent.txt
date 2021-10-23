@@ -12,3 +12,8 @@ The added books will be stored into the browser localStorage, and will be erased
 
 
 In this project i used HTML, CSS and javascript.
+
+Steps to run program:-
+1)  open folder studentLib_LoginPage
+2)  open the studentLibLoginPage.html in the folder 'studentLib_LoginPage'
+3)  open with liver server and run the program.

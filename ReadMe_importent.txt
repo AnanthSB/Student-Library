@@ -11,7 +11,7 @@ The main page contains Borrow, Return, Add  and Delete a book options and logout
 The added books will be stored into the browser localStorage, and will be erased as per the user book delete request.
 
 
-In this project i used HTML, CSS and javascript.
+In this project i used HTML, CSS ,javascript and Jquery.
 
 Steps to run program:-
 1)  open folder studentLib_LoginPage

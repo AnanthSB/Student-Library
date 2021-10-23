@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login To Student Library</title>
+    <link rel="stylesheet" href="/studentLib_LoginPage/mediaQForLoginPage.css">
+    <link rel="stylesheet" href="/studentLib_LoginPage/studentLibLoginPage.css">
+    <style></style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="/studentLib_LoginPage/imagesAndLogoes/books-png-30686.png" alt="Books Image">
+        </div>
+        <div class="sub_header">
+            <h2>Welcome To Student Library</h2>
+        </div>
+        <!-- background image for container used by css 'bgImage' -->
+        <div class="bgImage"></div>
+        <div id="para1" style="visibility:hidden;"><p id="para2"></p></div>
+        <div class="display">
+            <p>Your Login Deatils</p>
+            <p>__________________ </p>
+            <p>User Name - abcd</p>
+            <p>&nbsp;password - 123456</p>
+        </div>
+        <div class="container_body">
+            <form class="LoginPage" id="myform">
+                <div class="Login_div">
+                    <div>
+                        <h3>Login</h3>
+                    </div>
+                    <div class="input">
+                        <input type="text" id="u_id" placeholder="Enter username" name="u_id">
+                    </div>
+                    <div class="input">
+                        <input type="password" id="u_password" placeholder="Enter password" name="u_password">
+                    </div >
+                    <div class="border_button">
+                        <button id="onSubmit" onclick="btnF()"><a href="#">submit</a></button>
+                    </div>
+                </div>
+            </form>
+    
+        </div>
+        <div class="footer">
+            <h2>Keep Learning Keep Growing</h2>
+        </div>
+    </div>
+    <script src="/studentLib_LoginPage/studentLibLoginPage.js"></script>
+    <!-- <script src="/studentLib_MainPage/studentLib_MainPage_html.html"></script> -->
+</body>
+</html>

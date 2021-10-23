@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(204, 157, 76, 0.68);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    min-height: 100vh;
+    margin:8px 50px;
+    font-family: 'Noto Serif', serif;
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 100%;
+    max-height: 1000px;
+    background-color: rgba(204, 157, 76, 0);
+    overflow: hidden;
+}
+.header{
+    position: relative;
+    min-width: 100%;
+    max-width: 1000px;
+    min-height: 10%;
+    max-height: 25%;
+    background: rgba(204, 157, 76, 0);
+    display: flex;
+    justify-content: center;
+}
+.header img{
+    min-height: 9%;
+    width: 1000px;
+    max-height: 1%;
+    max-width: 100%;
+    position: relative;
+}
+.sub_header{
+    font-family: 'Noto Serif', serif;
+    min-height: 9%;
+    max-height: 10%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: #4f3a27;
+    font-size: 1.3em;
+    box-sizing: border-box;
+    color: rgb(224, 213, 207);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.footer{
+    font-family: 'Noto Serif', serif;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: #4f3a27;
+    font-size: 0.6em;
+    box-sizing: border-box;
+    color: rgb(224, 213, 207);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: relative;
+    line-height: 16px;
+    min-height: 25px;
+}
+.bgImage{
+    background-image: url('/studentLib_LoginPage/imagesAndLogoes/LibImageForContainerBody.webp');
+    background-size: cover;
+    background-position: center;
+    /* background-repeat:bottom; */
+    background-size:cover;
+    filter:blur(3px);
+    -webkit-filter: blur(3px);
+    width: 100%;
+    max-width: 100%;
+    min-height: 60%;
+    position: absolute;
+}
+.container_body{
+    width: 100%;
+    max-width: 100%;
+    min-height: 55%;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    position: relative;
+    bottom: -4%;
+}
+.LoginPage {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 30px;
+}
+.LoginPage div {
+    display:grid;
+    grid-template-rows: auto auto auto auto;
+    grid-gap:1px;
+    text-shadow: 1px 0px 0px black;
+    font-weight: 1000;
+
+}
+
+.LoginPage div h3 {
+    font-size: 1.5em;
+    color: #341c06;
+    text-align: center;
+    transform: scaleX(1.2);
+}
+.Login_div{
+    display: flex;
+    flex-flow: column;
+    min-width: 35%;
+    max-width: 100%;
+    text-align: center;
+}
+.input input{
+    color: antiquewhite;
+    border: 0px solid;
+    height: 25px;
+    border-radius: 55px;
+    padding: 0px 11px;
+    width: 100%;
+    text-align: center;
+    background: #7d7875e3;
+    box-shadow: 0px 2px 8px 1px #1e1c1c;
+    border: 1px outset black;
+    /* background-color: #251003bf; */
+    background: #251003bf;
+    box-shadow: 0px 1px 5px 2px black;
+    border: 1px outset white;
+}
+.input input:focus{
+    outline:none;
+}
+.border_button a{
+    font-size: 1rem;
+    text-decoration: none;
+    color: #4f2805;
+    width: 100%;
+    display: inline-block;
+    padding-top: 1%;
+    height: 100%;
+}
+.border_button button{
+    width: 100%;
+    color: #020100;
+    font-weight: bold;
+    height: 25px;
+    border-radius: 38px;
+    background: #7d78753d;
+    box-shadow: 0px 0px 3px;
+    cursor: pointer;
+}
+
+#para1{
+    position: relative;
+    bottom: 6px;
+    color: #ceaa88;
+    font-weight: 1000;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background: #080604cc;
+    padding: 5px 0px;
+        padding-bottom: 5px;
+    padding-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    justify-content: center;
+    border-top: 10px solid #4f3a27;
+    padding-bottom: 5px;
+    font-size: 0.8em;
+}
+
+.display{
+    position: absolute;
+    left: 0%;
+    top: 42%;
+    font-weight: 1000;
+    border-right: 5px inset #00ffffc7;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    padding: 10px 0px;
+    background: #708090a1;
+    text-align: center;
+    border-left: 6px inset #0ff;
+}
+
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Library</title>
+    <link rel="stylesheet" href="/studentLib_MainPage/studentLib_MainPage_css.css">
+    <link rel="stylesheet" href="/studentLib_MainPage/mediaQ.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- navbar div -->
+        <div class="container_header">
+            <nav class="navbar bg-dark navbar_expand">
+                <a href="#" class="h1">My Library</a>
+                <div class="navbar_div">
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" id="myBook">My Books</a>
+                            <div id="mybooksToglebox">
+                                <table class="myBooksTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Book</th>
+                                            <th>Author</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Python &nbsp;</td>
+                                            <td>Guido Van Rossum</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                        <li>
+                            <abbr title="Click to change the Mode">
+                            <button onclick="darkM()" id="darkM">
+                                    <img src="/studentLib_MainPage/Icons/adjust-switchMode.svg" alt="SwitchMode" id="darkMicon">
+                                </button>
+                            </abbr>
+                        </li>
+                    </ul>
+                    <!-- Search book form section -->
+                    <form id="searchForm">
+                        <input  id="searchTxt" type="text" placeholder="Search" name="searchTxt">
+                        <button id="searchBtn" class="cursor_pointer" onmouseenter="searchBtn0()" onmouseleave="searchBtn1()" onmousedown="searchBtn2()"
+                        onmouseup="searchBtn3()">
+                        <abbr title="Refresh">
+                            <i id="fa" class="fa fa-refresh height" aria-hidden="true" onclick="window.location.reload();">
+                            </i>
+                        </abbr>
+                    </button>
+                    </form>
+                </div>
+                <!-- logoutBtn -->
+                <button onmouseenter="logoutBtn0()" onmouseleave="logoutBtn1()" onmousedown="logoutBtn2()"
+                    onmouseup="logoutBtn3()" id="logoutBtn" class="cursor_pointer" type="submit">
+                    Logout</button>
+                <script>
+                    document.getElementById('logoutBtn').onclick = function () {
+                        location.href = "/studentLib_LoginPage/studentLibLoginPage.html";
+                    }
+                </script>
+            </nav>
+            <div id="message" style="background:rgba(255, 255, 0, 0.288); z-index:5; position:absolute;"></div>
+        </div>
+        <!-- navbar div closing-->
+
+        <!-- container body -->
+        <div class="container_body">
+            <h1>My Library</h1>
+            <hr id="hr">
+
+            <!-- books options buttons visibility:hidden -->
+            <div class="submitBtn ">
+                <button type="submit" id="borrowSeleBtn" class="AddBtn">Borrow a book</button>
+                <button type="submit" id="returnSeleBtn" class="AddBtn">Return a book</button>
+                <button type="submit" id="add" class="AddBtn">Add a book</button>
+            </div>
+            <form id="libraryForm">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label" for="bookName">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="bookName" class="form-control" placeholder="Book Name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label" for="Author">Author</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="author" class="form-control" placeholder="Author">
+                    </div>
+                </div>
+                <fieldset class="form-group" id="fieldset">
+                    <div class=row>
+                        <legend class="col-form-label col-sm-2 pt-0">Type</legend>
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input type="radio" id="fiction" class="form-check-input" name="type" value="fiction"
+                                checked="">
+                            <label for="fiction" class="form-check-label">Fiction</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" id="programming" class="form-check-input" name="type"
+                                value="programming">
+                            <label for="programming" class="form-check-label">Computer Programming</label>
+                        </div>
+                        <div class="form-check disabled">
+                            <input type="radio" id="cooking" class="form-check-input" name="type" value="cooking">
+                            <label for="cooking" class="form-check-label">Cooking</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" id="others" class="form-check-input" name="type" value="Others">
+                            <label for="others" class="form-check-label">Others</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- from here give functionalities to borrow and return btns. -->
+                <div id="submitBtn" class="submitBtn">
+                    <button type="submit" id="AddBtn">Add</button>
+                </div>
+            </form>
+            <script>
+            </script>
+            <div id="tableHead">
+                <h1>Books Available</h1>
+            </div>
+            <div id="table">
+                <div id="tr4Th">
+                    <div id="th1" class="hdTagStyle"> <h3>Name</h3> </div>
+                    <div id="th2" class="hdTagStyle"> <h3>Author</h3> </div>
+                    <div id="th3" class="hdTagStyle"> <h3>Type</h3> </div>
+                    <div id="th4" class="hdTagStyle"> <h3>Action</h3> </div>
+                </div>
+                <table class="table">
+                    <tbody id="tableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- container body closing -->
+    </div>
+    <script src="/studentLib_MainPage/studentLib_Main_js.js"></script>
+    <script src="/studentLib_MainPage/studentLib_MainPageBtns_js.js"></script>
+</body>
+
+</html>
